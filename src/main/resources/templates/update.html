@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+</head>
+<body>
+<form method="POST" th:action="@{/save/{id}(id=${id})}">
+    <label for="name">Name</label>
+    <input name="name" type="text" id="name"/>
+    <br>
+    <label for="surname">Surname</label>
+    <input name="surname" type="text" id="surname"/>
+    <br>
+    <input type="submit" value="Submit"/>
+
+</form>
+</body>
+</html>
