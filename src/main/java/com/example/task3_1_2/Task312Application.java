@@ -1,4 +1,4 @@
-package com.example.task3_1_1;
+package com.example.task3_1_2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories
 @EntityScan
 @SpringBootApplication
-public class Task311Application {
+public class Task312Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Task311Application.class, args);
+        SpringApplication.run(Task312Application.class, args);
     }
 
 }
