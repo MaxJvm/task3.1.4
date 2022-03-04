@@ -1,4 +1,4 @@
-package com.example.task3_1_2.model;
+package com.example.task3_1_3.model;
 
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,6 +21,8 @@ public class User implements UserDetails {
 
     private String password;
 
+    private int age;
+
     @Column(name = "name")
     private String firstName;
 
@@ -38,11 +40,12 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String username, String password, String firstName, String lastName) {
+    public User(String username, String password, String firstName, String lastName, int age) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age = age;
     }
 
     @Override

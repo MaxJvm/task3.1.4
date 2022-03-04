@@ -1,6 +1,6 @@
-package com.example.task3_1_2.dao;
+package com.example.task3_1_3.dao;
 
-import com.example.task3_1_2.model.Role;
+import com.example.task3_1_3.model.Role;
 import org.springframework.data.repository.CrudRepository;
 
 public interface RoleRepository extends CrudRepository<Role, Long> {

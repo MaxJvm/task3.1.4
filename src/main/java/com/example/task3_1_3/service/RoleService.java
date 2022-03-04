@@ -1,7 +1,7 @@
-package com.example.task3_1_2.service;
+package com.example.task3_1_3.service;
 
-import com.example.task3_1_2.dao.RoleRepository;
-import com.example.task3_1_2.model.Role;
+import com.example.task3_1_3.dao.RoleRepository;
+import com.example.task3_1_3.model.Role;
 import org.springframework.stereotype.Service;
 
 @Service

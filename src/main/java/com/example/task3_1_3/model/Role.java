@@ -1,4 +1,4 @@
-package com.example.task3_1_2.model;
+package com.example.task3_1_3.model;
 
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;

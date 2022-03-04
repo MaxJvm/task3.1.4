@@ -1,6 +1,6 @@
-package com.example.task3_1_2.config;
+package com.example.task3_1_3.config;
 
-import com.example.task3_1_2.service.UserService;
+import com.example.task3_1_3.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

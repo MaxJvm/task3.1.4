@@ -1,6 +1,6 @@
-package com.example.task3_1_2.dao;
+package com.example.task3_1_3.dao;
 
-import com.example.task3_1_2.model.User;
+import com.example.task3_1_3.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
