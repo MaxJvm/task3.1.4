@@ -1,11 +1,15 @@
-package com.example.task3_1_3.model;
+package com.example.task3_1_4.model;
 
+import com.example.task3_1_4.service.RoleService;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Data
@@ -56,6 +60,23 @@ public class User implements UserDetails {
                 ", lastName='" + lastName + '\'';
     }
 
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
+    }
+
+/*    private void setRoles(String roles) {
+        String[] names = roles.split("[\\s,]");
+        this.roles = new ArrayList<>();
+        for (String n : names) {
+            Role role = new Role(n);
+            if (roleService.existsByName(n)) {
+                role = roleService.findByName(n);
+            } else {
+                roleService.save(role);
+            }
+            this.roles.add(role);
+        }
+    }*/
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

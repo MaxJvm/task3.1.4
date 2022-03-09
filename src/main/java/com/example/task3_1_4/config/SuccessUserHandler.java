@@ -1,4 +1,4 @@
-package com.example.task3_1_3.config;
+package com.example.task3_1_4.config;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;

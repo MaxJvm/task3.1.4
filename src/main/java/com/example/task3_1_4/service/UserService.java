@@ -1,8 +1,8 @@
-package com.example.task3_1_3.service;
+package com.example.task3_1_4.service;
 
-import com.example.task3_1_3.dao.UserRepository;
-import com.example.task3_1_3.model.Role;
-import com.example.task3_1_3.model.User;
+import com.example.task3_1_4.dao.UserRepository;
+import com.example.task3_1_4.model.Role;
+import com.example.task3_1_4.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,5 +94,9 @@ public class UserService implements UserDetailsService {
             roleList.add(role);
         }
         user.setRoles(roleList);
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 }

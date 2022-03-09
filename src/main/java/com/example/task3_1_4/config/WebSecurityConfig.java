@@ -1,6 +1,6 @@
-package com.example.task3_1_3.config;
+package com.example.task3_1_4.config;
 
-import com.example.task3_1_3.service.UserService;
+import com.example.task3_1_4.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -38,7 +38,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll();
+                .permitAll()
+                .and().httpBasic().
+                and().csrf().disable();
     }
 
 
