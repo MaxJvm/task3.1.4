@@ -136,6 +136,15 @@ async function processUser(modal, id, action) {
     let closeButton = `<button type="button" class="btn btn-muted" data-dismiss="modal">Close</button>`
     modal.find(".modal-footer").append(editButton);
     modal.find(".modal-footer").append(closeButton);
+    let selectU = ""
+    let selectA = ""
+    for (const role of user.roles) {
+        if (role.name == "ROLE_USER") {
+            selectU = `selected="selected"`
+        } else {
+            selectA = `selected="selected"`
+        }
+    }
     let bodyForm = `<form id="editForm" class="bg-white text-center form-group">
                             <label class="font-weight-bold" for="edid">ID</label> <br>
                             <input class="col-4 bg-light" name="id" type="text" id="edid"
@@ -158,8 +167,8 @@ async function processUser(modal, id, action) {
                             <label class="font-weight-bold" for="roles">Roles</label> <br>
                             <select class="col-4 custom-select" name="roles" multiple
                                     id="edroles" ${ro}>
-                                <option>ROLE_ADMIN</option>
-                                <option>ROLE_USER</option>
+                                <option ${selectA}>ROLE_ADMIN</option>
+                                <option ${selectU}>ROLE_USER</option>
                             </select>
                     </form>                 
         `;
