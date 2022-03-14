@@ -84,7 +84,11 @@ function addUser(row, user) {
     username.innerText = user.username
     let rolesText = ""
     for (const role of user.roles) {
-        rolesText += role.name + "\n"
+        if (role.name.startsWith("ROLE")){
+            rolesText += role.name.slice(5) + "\n"
+        }else {
+            rolesText += role.name + "\n"
+        }
     }
     const roles = row.insertCell()
     roles.innerText = rolesText
